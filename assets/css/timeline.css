@@ -11,7 +11,10 @@ body {
   background: #55679a;
   color: #fff;
   overflow-x: hidden;
-}  /* INTRO SECTION
+}
+
+/* INTRO SECTION
+
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
@@ -33,6 +36,13 @@ h1 {
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline div {
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
 
 .timeline ul {
   background: linear-gradient(#d6cff9 10%, #8d82c4 60%, #55679a 70%, #55679a 70%);
@@ -91,6 +101,9 @@ h1 {
 .timeline ul li:nth-child(odd) div {
   left: 45px;
 }
+.timeline ul li:nth-child(1) div {
+  left: 80px;
+}
 
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
@@ -109,10 +122,9 @@ h1 {
 }
 
 time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 
