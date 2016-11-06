@@ -50,6 +50,12 @@ h1 {
   badding-top: 18px;
   padding-bottom: 200px;
 }
+#timelinewia ul {
+  background: linear-gradient(#6ddaff 5%, #6fc3df 40%, #8d82c4 70%);
+
+  badding-top: 18px;
+  padding-bottom: 200px;
+}
 /*CREATES THE TIMELINE*/
 /*MIDDLE LINE*/
 .timeline ul li {
@@ -80,14 +86,17 @@ h1 {
   bottom: -70px;
   width: 450px;
   padding: 15px;
-  /*background: #F45B69;*/
-/*
-  -webkit-border-radius: 45px;
-  -moz-border-radius: 45px;*/
-  /*border-radius: 45px;*/
   border:4px solid #8EA9E8;
-  background:rgba(142,169,232,0.1);
+  background:rgba(142,169,232,0);
 }
+
+#timelinewia ul li div {
+  border:0px solid #6fc3df ;
+  /*border-top: 0px;
+  border-right: 0px;
+  background:rgba(142,169,232,0.4);*/
+}
+
 
 .timeline ul li div::before {
   content: '';
@@ -157,6 +166,7 @@ timewia {
 .timeline ul li:nth-child(odd) div {
   transform: translate3d(200px, 0, 0);
 }
+
 
 .timeline ul li:nth-child(even) div {
   transform: translate3d(-200px, 0, 0);
