@@ -41,6 +41,7 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+  text-align: justify;
 }
 
 
@@ -60,15 +61,15 @@ h1 {
 }
 /*DOTS*/
 .timeline ul li::after {
-  content: '';
-  position: absolute;
+
+  position: relative;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%);
+  /*transform: translateX(-50%);*/
   width: 30px;
   height: 30px;
   border-radius: 50%;
-
+  box-sizing:content-box;
   /*background: inherit;*/
 /*
   border: 3px solid white ;*/
@@ -77,7 +78,7 @@ h1 {
 .timeline ul li div {
   position: relative;
   bottom: -70px;
-  width: 400px;
+  width: 450px;
   padding: 15px;
   /*background: #F45B69;*/
 /*
@@ -101,9 +102,6 @@ h1 {
 .timeline ul li:nth-child(odd) div {
   left: 45px;
 }
-.timeline ul li:nth-child(1) div {
-  left: 80px;
-}
 
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
@@ -112,7 +110,7 @@ h1 {
 }
 
 .timeline ul li:nth-child(even) div {
-  left: -439px;
+  left: -489px;
 }
 
 .timeline ul li:nth-child(even) div::before {
@@ -132,12 +130,15 @@ time {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul li::after {
-  transition: background .5s ease-in-out;
+  transition: background 1.0s ease-in-out;
 }
 
 .timeline ul li.in-view::after {
 
   border:3px solid #ffffff;
+
+  transform: translateX(-50%);
+
   /*background: #F45B69;*/
   /*COOL! Dot effect*/
 }
@@ -145,7 +146,7 @@ time {
 .timeline ul li div {
   visibility: hidden;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 
 .timeline ul li:nth-child(odd) div {
