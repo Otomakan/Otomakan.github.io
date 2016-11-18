@@ -3356,7 +3356,7 @@
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		background-image: url("../../images/bubblecat1.gif");
+		background-image: url("../../images/bubblecat.gif");
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3376,7 +3376,7 @@
 		top: -3.25em;
 	}
 
-	/*	#banner:after {
+		#banner:after {
 			-moz-transition: opacity 2.5s ease;
 			-webkit-transition: opacity 2.5s ease;
 			-ms-transition: opacity 2.5s ease;
@@ -3384,7 +3384,7 @@
 			-moz-transition-delay: 0.75s;
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
+			transition-delay: 0.75s; */
 			-moz-pointer-events: none;
 			-webkit-pointer-events: none;
 			-ms-pointer-events: none;
@@ -3399,7 +3399,7 @@
 			top: 0;
 			width: 100%;
 			z-index: 1;
-		} */
+		}
 
 		#banner h1 {
 			font-size: 3.25em;
