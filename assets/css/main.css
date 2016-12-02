@@ -3993,10 +3993,6 @@
 					display: -webkit-flex;
 					display: -ms-flex;
 					display: flex;
-					-moz-transition: -moz-transform 0.25s ease, opacity 0.25s ease, -moz-filter 1s ease, -webkit-filter 1s ease;
-					-webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease, -webkit-filter 1s ease, -webkit-filter 1s ease;
-					-ms-transition: -ms-transform 0.25s ease, opacity 0.25s ease, -ms-filter 1s ease, -webkit-filter 1s ease;
-					transition: transform 0.25s ease, opacity 0.25s ease, filter 1s ease, -webkit-filter 1s ease;
 					padding: 4em 4em 2em 4em ;
 					background-position: center;
 					background-repeat: no-repeat;
@@ -4013,10 +4009,24 @@
 					.bigtiles article .image {
 						display: none;
 					}
-
-					.bigtiles article header {
+					.bigtiles article h4 {
+						color: #ffffff;
+						font-family: "Source Sans Pro", Helvetica, sans-serif;
+						font-size: 17pt;
+						font-weight: 300;
+						letter-spacing: 0.025em;
+						line-height: 1.65;
+						margin-left: 20em;
 						position: relative;
-						z-index: 3;
+					}
+
+					.bigtiles article header{
+						position: relative;
+						z-index: 2;
+						-moz-transition: opacity 0.5s ease;
+						-webkit-transition: opacity 0.5s ease;
+						-ms-transition: opacity 0.5s ease;
+						transition: opacity 0.5s ease;
 					}
 
 					.bigtiles article h3 {
@@ -4062,7 +4072,7 @@
 						position: absolute;
 						top: 0;
 						width: 100%;
-						z-index: 1;
+						z-index: 5;
 					}
 
 					.bigtiles article:hover:before {
