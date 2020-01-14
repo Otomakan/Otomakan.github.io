@@ -1,0 +1,11 @@
+{
+  "name": "Resteye",
+  "short_name": "RY",
+  "theme_color": "#dcf3ed",
+  "background_color": "#5bc1a5",
+  "display": "browser",
+  "Scope": "/",
+  "start_url": "./",
+  "icons": null,
+  "splash_pages": null
+}
