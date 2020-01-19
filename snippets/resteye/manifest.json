@@ -4,8 +4,8 @@
   "theme_color": "#222831",
   "background_color": "#ffad17",
   "display": "standalone",
-  "Scope": "/snippets/resteye",
-  "start_url": "/snippets/resteye/index.html",
+  "Scope": "/jmisteli.github.io/snippets/resteye",
+  "start_url": "/jmisteli.github.io/snippets/resteye/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
