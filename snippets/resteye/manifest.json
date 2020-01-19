@@ -4,8 +4,8 @@
   "theme_color": "#222831",
   "background_color": "#ffad17",
   "display": "browser",
-  "Scope": "/snippets/resteye",
-  "start_url": "/snippets/resteye/index.html",
+  "Scope": "",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
