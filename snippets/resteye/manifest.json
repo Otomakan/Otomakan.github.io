@@ -3,7 +3,7 @@
   "short_name": "RE",
   "theme_color": "#222831",
   "background_color": "#ffad17",
-  "display": "browser",
+  "display": "standalone",
   "Scope": "/snippets/resteye",
   "start_url": "/snippets/resteye/index.html",
   "icons": [

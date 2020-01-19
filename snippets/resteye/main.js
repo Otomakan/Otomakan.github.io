@@ -71,7 +71,7 @@ const rest = async (state) => {
 		status: '',
 		time : 0,
 		restTime: 1000,
-		workTime: 5
+		workTime: 5000
 	}, {
 		set : (target, prop, val) => {
 			if (prop === 'status') {
