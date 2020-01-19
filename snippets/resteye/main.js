@@ -26,7 +26,6 @@ const work = async (state) => {
 		const notificationOptions = {
 			...defaultNotification,
 			body : 'Stop Working',
-			actions: 
 		};
 		var notification = new Notification('Stop Working', notificationOptions);
 		notification.onclick =  () => { state.status = 'resting' };
