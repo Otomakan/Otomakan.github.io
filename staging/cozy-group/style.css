@@ -1,0 +1,170 @@
+:root {
+	--white: white;
+	--blue: #49C9D1;
+	--yellow: #FFC700;
+	--red: #FF6759;
+	--green: #BFD84F;
+	--navbar-height: 4.6rem;
+}
+body {
+	background: var(--white);
+	font-family: 'Indie Flower', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+}
+
+h1, h2, h3{
+	font-family: 'Amatic SC', cursive;
+
+}
+
+nav {
+	/* color: white; */
+	display: flex;
+	width: 100%;
+	height: var(--navbar-height);
+	position: relative;
+}
+
+
+
+@keyframes rockyourboat {
+	from {transform: rotateZ(45deg);}
+	to {transform: rotateZ(-45deg);}
+}
+
+
+@keyframes rollypolly {
+	from {transform: rotate(0) }
+	to {transform: rotate(1305deg)}
+}
+
+@keyframes roll {
+	from {left: 0;}
+	to {left: 100%;}
+}
+.nav-items {
+	background: var(--red);
+	border-radius: 15px;
+	box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+	border: 1px solid #C1BCD6;
+	width: inherit;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin:0;
+}
+
+.nav-item {
+	color: var(--white);
+	display: block;
+	font-size: 26px;
+	cursor:pointer;	
+	transition:0.3s;
+}
+@media only screen and (max-width: 500px) {
+	.nav-item {
+		display: none;
+	}
+}
+.nav-item:hover {
+	color:black;
+}
+
+/* .nav-logo-container {
+	max-height: 200%;
+} */
+.nav-logo-container {
+	/* position: relative; */
+	width: var(--navbar-height);
+
+}
+.nav-logo {
+	height: 100%;
+	max-height: 200%;
+	position: absolute;
+	animation: rollypolly  4s 1 reverse, roll  4s 1 reverse;
+}
+
+
+@media only screen and (max-width: 500px) {
+	.nav-item {
+		display: none;
+	}
+	.nav-logo {
+		animation: rollypolly  2s 1 reverse, roll  2s 1 reverse;
+	}
+
+
+}
+
+.background {
+	position: fixed;
+	top:0;
+	left:0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -2;
+}
+
+.page-container {
+	margin: 5rem 15rem;
+}
+@media only screen and (max-width: 800px) {
+	.page-container {
+		margin: 3rem 5rem;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.page-container {
+		margin: 2rem ;
+	}
+}
+.main-logo {
+	width: 60%;
+	max-width: 800px;
+	animation: rockyourboat  16s infinite alternate;
+}
+
+.hero {
+	width: 100%;
+}
+
+.hero .title {
+	font-size: 6rem;
+	margin:0;
+}
+
+.content-boxes {
+	display: flex;
+	flex-direction: column;
+  width: 100%;
+
+}
+.content-box {
+	width: 100%;
+	max-width: 500px;
+	padding: 1rem 2rem;
+	margin: 1rem 0;
+}
+@media only screen and (max-width: 500px) {
+	.content-box  {
+		max-width: 100%;
+	}
+}
+.content-box.left {
+	align-self: flex-start;
+  background: var(--yellow);
+}
+.content-box.right {
+  align-self: flex-end;
+  background: var(--blue);
+}
+.content-box .title {
+	color:white;
+	margin: 0;
+	font-size: 50px;
+}
