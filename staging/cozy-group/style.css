@@ -16,6 +16,7 @@ body {
 	font-family: 'Open Sans';
 	font-family: 'Gloria Hallelujah', cursive;
 	margin:0;
+	overflow-x: hidden;
 }
 
 h1, h2, h3{
@@ -226,18 +227,43 @@ nav {
 
 }
 
-.section > p {
+/* .section > p {
 	background: white;
 	border: 2px solid var(--blue);
 	padding: 1.6rem 2rem;
 	border-color: var(--red);
 
+} */
+
+.section-content {
+	background: white;
+	border: 3px solid var(--blue);
+	padding: 0.6rem 2rem;
+	/* border-color: var(--red); */
+	margin: 2rem 0;
+	background: #f0f8ff;
+	/* border-width: 0px; */
+	border-radius: 8px;
+	background: white;
+	border-color: var(--yellow);
+
+
 }
-.section > p:nth-child(1) {
+.section-content:nth-child(3) {
 	border-color: var(--red);
+	/* background:#fff3f0; */
+
 }
-.section > p:nth-child(2) {
+.section-content:nth-child(4) {
 	border-color: var(--green);
+	/* background:#fff3f0; */
+
+}
+.section-content:nth-child(2) {
+	/* background: #f0fff6; */
+	border-color: var(--blue);
+
+
 }
 .section > h2 {
 	width: fit-content;
