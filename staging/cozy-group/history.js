@@ -85,6 +85,7 @@ const pageTransitionAnimation = (targetUrl)=>{
 		populateLinks()
 	},500)
 
+
 }
 
 //This function is used to load some HTML from targetUrl, 
@@ -111,6 +112,8 @@ const loadTemplate = (targetDiv, targetUrl,targetContent) => {
 			// To do that pass a "target" by default it will be documetn
 			
 			populateLinks()
+			addAnimalsInSectionContent()
+			
 			
 			var navigatingEvent = new Event('navigating')
 			window.dispatchEvent(navigatingEvent)

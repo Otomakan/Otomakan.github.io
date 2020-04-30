@@ -13,7 +13,7 @@ html {
 body {
 	background: var(--white);
 	font-family: 'Indie Flower', cursive;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', sans-serif;
 	font-family: 'Gloria Hallelujah', cursive;
 	margin:0;
 	overflow-x: hidden;
@@ -31,6 +31,18 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none; /* Remove default bullets */
+}
+
+li::before {
+	content: "\2022";
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	display: inline-block;
+	margin: 0 10px;
+}
 nav {
 	/* color: white; */
 	display: flex;
@@ -40,6 +52,10 @@ nav {
 	margin: var(--navbar-margin);
 }
 
+ul li::before {
+	list-style: none; /* Remove default bullets */
+	content: ''
+}
 
 
 @keyframes rockyourboat {
@@ -159,6 +175,17 @@ nav {
 
 .page-container {
 	margin: 3rem 13rem;
+	/* max-width: 130; */
+}
+@media only screen and (max-width: 1380px) {
+	.page-container {
+		margin: 3rem 8rem;
+	}
+}
+@media only screen and (max-width: 1380px) {
+	.page-container {
+		margin: 3rem 5rem;
+	}
 }
 @media only screen and (max-width: 800px) {
 	.page-container {
@@ -186,25 +213,112 @@ nav {
 	margin:0;
 }
 
+.hero-card {
+	display: flex;
+	background: floralwhite;
+	font-size: 50px;
+	border: 6px solid var(--red);
+
+	align-items: center;
+}
+
+
+.hero-card h2 {
+	font-size: 3.4rem;
+	margin: 2rem;
+
+}
+.hero-card-logo {
+	width:30%;
+
+}
+
+@media only screen and (max-width: 765px) {
+	.hero-card {
+		flex-direction: column;
+	}
+	.hero-card-logo {
+		margin-top: 2rem;
+	}
+}
+
+
 .content-boxes {
 	display: flex;
 	flex-direction: column;
   width: 100%;
 
 }
+.content-box-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+.content-box-image-container {
+	background: white;
+	/* padding: 35px; */
+	background: white;
+	border-radius: 10px;
+	margin: 1rem 0;
+	max-width: 500px;
+	width:50%;
+	position: relative;
+	margin: 1rem 0;
+
+}
+
+.content-box-image {
+	width: 100%;
+	height:100%;
+	height: calc(100% - 16px);
+	width: calc(100% - 16px);
+	transition: 4s;
+
+	background-image: url('./assets/images/photos/cozy_group_main_room.jpg');
+	background-size: cover;
+	/* border-radius: 10px; */
+	/* border-radius: 10px; */
+	padding: 1rem 2rem;
+	border: 8px solid var(--red);
+	max-width: 500px;
+	width:50%;
+	height: calc(100% - 2rem - 16px);
+	height: auto;
+	margin: 1rem 0;
+
+
+
+}
+.content-box-image::nth-child(2) {
+	border-color: var(--green);
+}
+.content-box-image-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(45deg, var(--red), transparent);
+	content: '';
+	opacity: 0.3;
+	top:0;
+	left:0;
+	transition: 0.3s;
+}
+
+.content-box-image-overlay:hover {
+	opacity: 0;
+}
+
 .content-box {
 	width: 100%;
-	max-width: 500px;
+	max-width: 600px;
 	padding: 1rem 2rem;
 	margin: 1rem 0;
 }
-@media only screen and (max-width: 500px) {
-	.content-box  {
-		max-width: 100%;
-		/* margin:0; */
-		width: auto;
-	}
-}
+
 .content-box.left {
 	align-self: flex-start;
   background: var(--yellow);
@@ -217,6 +331,32 @@ nav {
 	color:white;
 	margin: 0;
 	font-size: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+	.content-box-wrapper {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.content-box {
+		width: 90%;
+    max-width: 90%;
+	}
+	.content-box-image {
+		height: 369px;
+		width: 75%;
+	}
+	.content-box-wrapper.right{
+		flex-direction:column-reverse;
+		align-items: center;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.content-box  {
+		max-width: 100%;
+		/* margin:0; */
+		width: auto;
+	}
 }
 
 .regular-page-content {
@@ -246,7 +386,8 @@ nav {
 	border-radius: 8px;
 	background: white;
 	border-color: var(--yellow);
-
+	/* display: flex;/ */
+	/* flex-wrap: wrap; */
 
 }
 .section-content:nth-child(3) {
@@ -273,6 +414,14 @@ nav {
 	
 }
 
+.section-content > .section-logo {
+	width: 70px;
+	float: left;    
+	width: 73px;
+	float: left;
+	margin: 0 14px;
+}
+
 .highlight-background {
 	transition:1s;
 	width: 0;
@@ -281,4 +430,23 @@ nav {
 	left:0;
 	z-index: -1;
 	height: 100%;
+	border-radius: 3px;
+}
+
+.contact-card {
+	width: fit-content;
+	background: floralwhite;
+	/* border-radius: 20px; */
+	padding: 20px;
+	/* font-family: 'Indie Flower', cursive; */
+	/* font-family: 'Open Sans', sans-serif; */
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 1.3rem;
+	font-size: 2rem;
+	border: 6px solid var(--red);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	
+	/* border: 6px solid var(--red); */
 }
