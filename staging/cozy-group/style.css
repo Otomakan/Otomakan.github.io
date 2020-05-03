@@ -18,7 +18,11 @@ body {
 	margin:0;
 	overflow-x: hidden;
 }
-
+pre {
+	font-family: 'Indie Flower', cursive;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Gloria Hallelujah', cursive;
+}
 h1, h2, h3{
 	font-family: 'Amatic SC', cursive;
 }
@@ -51,6 +55,7 @@ nav {
 	position: relative;
 	margin: var(--navbar-margin);
 }
+
 
 ul li::before {
 	list-style: none; /* Remove default bullets */
@@ -86,7 +91,9 @@ ul li::before {
 	margin:0;
 	width: 100%;
 }
-
+.small-menu {
+	display: none;
+}
 /* Small nav */
 @media only screen and (max-width: 800px) {
 	nav {
@@ -109,6 +116,16 @@ ul li::before {
 	}
 	.nav-items.show {
 		transform: scale(1);
+	}
+	.small-menu {
+		font-size: 3rem;
+		display: block;
+		margin: 0;
+		transition: 0.3;
+	}
+	
+	.small-menu:hover{
+		transform: scale(1.1);
 	}
 }
 
@@ -199,8 +216,8 @@ ul li::before {
 }
 .main-logo {
 	width: 60%;
-	max-width: 800px;
-	animation: rockyourboat  16s infinite alternate;
+	max-width: 700px;
+	animation: rockyourboat  23s infinite alternate;
 }
 
 .hero {

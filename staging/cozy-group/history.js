@@ -113,6 +113,7 @@ const loadTemplate = (targetDiv, targetUrl,targetContent) => {
 			
 			populateLinks()
 			addAnimalsInSectionContent()
+			highlightText()
 			
 			
 			var navigatingEvent = new Event('navigating')

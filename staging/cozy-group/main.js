@@ -83,23 +83,25 @@ var addAnimalsInSectionContent = function() {
 
 var highlightText = function() {
 	var highlitables = document.getElementsByClassName('highlight')
+	function highlight(target, i) {
+		if(isInViewport(target)) {
+		var background = document.createElement('div')
+		background.className = 'highlight-background'
+		background.style.background = themeColors[i%themeColors.length]
+		target.style.position = 'relative'
+		target.style.zIndex = '1'
+		
+
+		target.appendChild(background)
+		window.setTimeout(function(){
+			background.style.padding = '2px'
+			background.style.width = '100%'
+
+		}, Math.random() * 4000)
+	}
+	}
 	for (let i = 0 ; i < highlitables.length; i++) {
-			var target = highlitables[i]
-			if(isInViewport(target)) {
-			var background = document.createElement('div')
-			background.className = 'highlight-background'
-			background.style.background = themeColors[i%themeColors.length]
-			target.style.position = 'relative'
-			target.style.zIndex = '1'
-			
-
-			target.appendChild(background)
-			window.setTimeout(()=>{
-				background.style.padding = '2px'
-				background.style.width = '100%'
-
-			}, Math.random() * 4000)
-		}
+		highlight(highlitables[i], i)
 	}
 }
 var navBarSetup = () => {
