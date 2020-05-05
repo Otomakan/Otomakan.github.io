@@ -51,6 +51,7 @@ li {
   list-style: none; /* Remove default bullets */
 }
 
+
 li::before {
 	content: "\2022";
 	color: white;
@@ -59,6 +60,8 @@ li::before {
 	display: inline-block;
 	margin: 0 10px;
 }
+li.black::before{color: black;}
+
 nav {
 	display: flex;
 	height: var(--navbar-height);
@@ -68,10 +71,10 @@ nav {
 }
 
 
-ul li::before {
+/* ul li::before {
 	list-style: none; /* Remove default bullets */
 	content: ''
-}
+} */
 
 
 @keyframes rockyourboat {
