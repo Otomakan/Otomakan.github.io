@@ -60,9 +60,7 @@ li::before {
 	margin: 0 10px;
 }
 nav {
-	/* color: white; */
 	display: flex;
-	/* width: 100%; */
 	height: var(--navbar-height);
 	position: relative;
 	margin: var(--navbar-margin);
@@ -112,7 +110,9 @@ ul li::before {
 	nav {
 		cursor: pointer;
 		margin:0;   
-    background: antiquewhite;
+	border-bottom: 2px solid var(--blue);
+
+    /* background: antiquewhite; */
 	}
 	.nav-items {
 		top:calc(var(--navbar-height));
@@ -186,7 +186,10 @@ ul li::before {
 
 	.nav-logo {
 		animation: rollypolly  2s 1 reverse, roll  2s 1 reverse;
+	transform: scale(0.9);
+
 	}
+	
 
 
 }
