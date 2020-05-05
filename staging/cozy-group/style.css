@@ -7,6 +7,18 @@
 	--navbar-height: 4.6rem;
 	--navbar-margin: 1.3rem;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+	background: var(--blue);
+	border-radius: 5px;
+}
+
+::selection {
+  color: white;
+	background: var(--blue);
+	border-radius: 5px;
+}
 html {
 	width: 100vw;
 }
@@ -54,6 +66,7 @@ nav {
 	height: var(--navbar-height);
 	position: relative;
 	margin: var(--navbar-margin);
+	z-index: 10000000;
 }
 
 
@@ -270,6 +283,8 @@ ul li::before {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+
 }
 
 
@@ -306,6 +321,7 @@ ul li::before {
 	height: calc(100% - 2rem - 16px);
 	height: auto;
 	margin: 1rem 0;
+	align-self: normal;
 
 
 
@@ -337,11 +353,11 @@ ul li::before {
 }
 
 .content-box.left {
-	align-self: flex-start;
+	/* align-self: flex-start; */
   background: var(--yellow);
 }
 .content-box.right {
-  align-self: flex-end;
+	/* align-self: flex-end; */
   background: var(--blue);
 }
 .content-box .title {
@@ -360,8 +376,9 @@ ul li::before {
     max-width: 90%;
 	}
 	.content-box-image {
-		height: 369px;
+		/* height: 369px; */
 		width: 75%;
+		align-self: auto;
 	}
 	.content-box-wrapper.right{
 		flex-direction:column-reverse;
@@ -461,6 +478,21 @@ ul li::before {
 	z-index: -1;
 	height: 100%;
 	border-radius: 3px;
+}
+
+.highlight {
+	background-position: 100% 100%;
+	background-size: 200% 100%;
+	background-image: linear-gradient(to right,
+																			 yellow,
+																			 yellow 50%,
+																			 transparent 50%,
+																			 transparent);
+																			 
+ transition:   all 1.2s ease-in;
+}
+.highlight.show {
+  background-position :0 0
 }
 
 .contact-card {
