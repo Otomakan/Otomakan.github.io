@@ -14,28 +14,16 @@
 		
 			<script type="text/javascript">
 (function(d, s, id){
-	function getParameterByName(name, url) {
-		if (!url) url = window.location.href
-		name = name.replace(/[\[\]]/g, '\\$&')
-		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-			results = regex.exec(url)
-		if (!results) return null
-		if (!results[2]) return ''
-		return decodeURIComponent(results[2].replace(/\+/g, ' '))
-	}
-	const token = getParameterByName('koala-session-token')
-	if(token) {
+	
 		var js, fjs = d.getElementsByTagName(s)[0]
 		if (d.getElementById(id)){ return }
 		js = d.createElement(s); js.id = id
 		js.onload = function(){
 		// remote script has loaded
 		}
-		js.src = 'http://localhost:8080/bundle.js'
+		js.src = 'https://koala-snippet.s3.us-east-2.amazonaws.com/bundle.min.js'
 		fjs.parentNode.insertBefore(js, fjs)
-	} else {
-		console.error('Token not available')
-	}
+	
 }(document, 'script', 'koala-script'))
 </script>
 
