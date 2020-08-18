@@ -9,7 +9,8 @@ docReady(()=>{
         for(let i=0; i<sections.length; i++){
             const section = sections[i]
                 if(isScrolledIntoView(section)){
-                    section.classList.add('in-view')
+                    console.log("IN VIEW")
+                    // section.classList.add('in-view')
                 } else {
                     section.classList.remove('in-view')
                 }
@@ -18,17 +19,25 @@ docReady(()=>{
 })
 
 
-
+function loadedCanvas () {
+    const iframes = document.getElementsByTagName('iframe')
+    const links = ['https://calar.ink', 'https://fibery.io/anxiety','https://district0x.io']
+    for(let i=0; i<iframes.length; i++){
+        const iframe = iframes[i]
+        iframe.src= links[i]
+    }
+}
 function isScrolledIntoView(el) {
-    var rect = el.getBoundingClientRect();
-    var elemTop = rect.top;
-    var elemBottom = rect.bottom;
+     // Special bonus for those using jQuery
+     if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
 
-    // Only completely visible elements return true:
-    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-    // Partially visible elements return true:
-    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-    return isVisible;
+    var rect = el.getBoundingClientRect();
+    console.log(rect)
+    return (
+        rect.top >= 0
+    );
 }
 
 function docReady(fn) {
@@ -130,7 +139,7 @@ function docReady(fn) {
         ctx.rotate(Math.sin(Math.sin(this.rad)));
         ctx.translate(-this.x, -this.y);
         ctx.beginPath();
-        for (var i = 0; i < 86; i++) {
+        for (var i = 0; i < 36; i++) {
           var x = Math.cos(rad * i) * this.r + this.x;
           var y = Math.sin(rad * i) * this.r + this.y;
           if (i === 0) {
@@ -199,7 +208,7 @@ function docReady(fn) {
         var setX = rand(0, X);
         var setY = rand(0, Y);
         var setR;
-        Math.random() < 0.3 ? setR = rand(80, 100) : setR = rand(250, 450);
+        Math.random() < 0.3 ? setR = rand(50, 70) : setR = rand(100, 200);
         for (var i = 0; i < shapes.length; i++) {
           var x = Math.abs(setX - shapes[i].x);
           var y = Math.abs(setY - shapes[i].y);
@@ -293,16 +302,15 @@ function docReady(fn) {
       /********************
         Render
       ********************/
-      
+      loadedCanvas()
       function render() {
         ctx.clearRect(0, 0, X, Y);
-      
+        for (var i = 0; i < shapes.length; i++) {
+          shapes[i].render(i);
+        }
         for (var i = 0; i < confettis.length; i++) {
           confettis[i].render(i);
         }
-        for (var i = 0; i < shapes.length; i++) {
-            shapes[i].render(i);
-          }
         addShape();
         requestAnimationFrame(render);
       }

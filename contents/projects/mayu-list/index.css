@@ -65,7 +65,8 @@ background: var(--beige)
     position: absolute;
     z-index:10;
     content:"";
-    transition: 0.4s;
+    transition: 1.4s;
+    /* transition-delay: 2s; */
     background: var(--beige);
 }
 
