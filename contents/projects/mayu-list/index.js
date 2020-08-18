@@ -4,18 +4,18 @@ docReady(()=>{
     console.log("READY")
     const sections = document.getElementsByClassName('section')
     console.log(sections)
-    window.addEventListener("scroll",()=>{
-        console.log('scrolling')
-        for(let i=0; i<sections.length; i++){
-            const section = sections[i]
-                if(isScrolledIntoView(section)){
-                    console.log("IN VIEW")
-                    section.classList.add('in-view')
-                } else {
-                    section.classList.remove('in-view')
-                }
-        }
-    })
+    // window.addEventListener("scroll",()=>{
+    //     console.log('scrolling')
+    //     for(let i=0; i<sections.length; i++){
+    //         const section = sections[i]
+    //             if(isScrolledIntoView(section)){
+    //                 console.log("IN VIEW")
+    //                 section.classList.add('in-view')
+    //             } else {
+    //                 section.classList.remove('in-view')
+    //             }
+    //     }
+    // })
 })
 
 
