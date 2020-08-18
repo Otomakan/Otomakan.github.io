@@ -24,6 +24,9 @@ h1{
     max-width: 1100px;
     mix-blend-mode: exclusion;
     color: white;
+    background: white;
+    color: var(--blue);
+}
 }
 canvas#canvas {
     display: block;
