@@ -10,7 +10,7 @@ docReady(()=>{
             const section = sections[i]
                 if(isScrolledIntoView(section)){
                     console.log("IN VIEW")
-                    // section.classList.add('in-view')
+                    section.classList.add('in-view')
                 } else {
                     section.classList.remove('in-view')
                 }
@@ -36,7 +36,7 @@ function isScrolledIntoView(el) {
     var rect = el.getBoundingClientRect();
     console.log(rect)
     return (
-        rect.top >= 0
+        rect.top <= 0
     );
 }
 
