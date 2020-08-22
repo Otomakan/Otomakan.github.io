@@ -21,11 +21,12 @@ docReady(()=>{
 
 function loadedCanvas () {
     const iframes = document.getElementsByTagName('iframe')
-    const links = ['https://calar.ink', 'https://fibery.io/anxiety','https://district0x.io']
+    const links = ['https://calar.ink', 'https://fibery.io/anxiety','https://neoreach.com/','https://griflan.com/Clients/Bloom', 'https://globekit.co/','http://www.cartoonnetworkstudios.com/','https://www.raoul-gaillard.com/','https://upperquad.com/','http://friendlyprojects.com/play','http://marianopascual.me']
     for(let i=0; i<iframes.length; i++){
         const iframe = iframes[i]
         iframe.src= links[i]
     }
+   
 }
 function isScrolledIntoView(el) {
      // Special bonus for those using jQuery
