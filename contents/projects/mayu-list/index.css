@@ -30,7 +30,7 @@ h1{
 canvas#canvas {
     display: block;
     /* background: var(--beige); */
-    height: 100vh!important;
+    height: 100vh!important;`
     width: 100vw;
   }
 

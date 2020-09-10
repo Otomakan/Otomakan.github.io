@@ -1,8 +1,16 @@
+@font-face{font-family:Neue Montreal;src:url(./fonts/neuemontreal-regular.woff2) format("woff2"),url(./fonts/neuemontreal-regular.woff) format("woff");font-style:normal;font-weight:400;font-display:swap}@font-face{font-family:Neue Montreal;src:url(./fonts/neuemontreal-medium.woff2) format("woff2"),url(./fonts/neuemontreal-medium.woff) format("woff");font-style:normal;font-weight:500;font-display:swap}@font-face{font-family:Tungsten;src:url(./fonts/tungsten-semibold.woff2) format("woff2"),url(./fonts/tungsten-semibold.woff) format("woff");font-style:normal;font-weight:500;font-display:swap}
+
+
+div, p, h1, h2, h3 {
+    font-family: sans-serif;
+}
+
 :root{
-    --blue:#111d5e;
+    --blue:black;
     --red:#c70039;
     --orange:#f37121;
     --beige: #ffbd69;
+    --green: #3cedb7;
 }
 body{
     /* background: var(--blue); */
@@ -13,56 +21,34 @@ body{
     color: #FFFFFF;
     text-decoration: none;
 }
-h1, div, p, h2, h3, a {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black;
-}
-h1, h2, h3 {
-    color: var(--blue);
-}
 
-h3 {
-    font-size: 2.5rem;
-}
-nav {
-    width: 100vw;
-    display: flex;
-    color: black;
-}
-nav ul {
-    display: flex;
-    align-items: center;
-}
-nav ul a {
-    margin: 5px;
-    color: var(--blue);
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 0.8s;
-}
-nav ul a:hover{
-    color: var(--red);
-}
+
 .hero {
-    padding:10rem 5rem;
-    border-bottom: 1px solid var(--beige)
-    
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border-bottom: 1px solid var(--beige);
 }
 .title-container {
     width: 100%;
     display: flex;
-    justify-content:center;
+    /* justify-content:center; */
     flex-wrap: wrap;
+    font-weight: 500;
+    width: 80%;
 }
 .title-container .subtitle{
     font-size:50px;
     color: var(--blue);
     width: 100%;
-    justify-content:center;
+    /* justify-content:center; */
+    
+    padding-left:1rem;
     display:flex;
     margin:0;
 
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 200;
 
 }
@@ -70,16 +56,26 @@ nav ul a:hover{
     width: 100%;
     justify-content:center;
 }
+
+.search-container {
+    width:20%;
+    
+}
+.search {
+    height: 3rem;
+}
 h1{
-    font-size: 150px;
+    font-size: 17rem;
     color: white;
     /* top: 30vh; */
+    
     color: var(--blue);
     max-width: 1100px;
     mix-blend-mode: exclusion;
     color: white;
     background: white;
     color: var(--blue);
+    font-weight: 300;
     margin:0;
 }
 
@@ -138,5 +134,4 @@ h2 {
 .card .content {
     font-size: 18px;
     line-height: 27px;
-    color: black;
 }
